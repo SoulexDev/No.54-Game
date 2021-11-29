@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 36641eabc3affcd439f54eb48a83df94
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 9801397f829a1ed42984340315cbf362, type: 3}
+  iesMetaData:
+    FileFormatVersion: LM-63-1995
+    IESPhotometricType: Type C
+    IESMaximumIntensity: 83559.8
+    IESMaximumIntensityUnit: Candelas
+    Manufacturer: BEGA Copyright LUMCat V
+    LuminaireCatalogNumber: 
+    LuminaireDescription: 84537K2 + 71109
+    LampCatalogNumber: LED  124,8W
+    LampDescription: 8087 lm,134 W
+    PrefabLightType: 1
+    SpotAngle: 122.2
+    iesSize: 128
+    ApplyLightAttenuation: 1
+    UseIESMaximumIntensity: 1
+    CookieCompression: 2
+    LightAimAxisRotation: -90

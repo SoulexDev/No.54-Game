@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: a18c9148d584b374ba72def3f3cd65b5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 9801397f829a1ed42984340315cbf362, type: 3}
+  iesMetaData:
+    FileFormatVersion: LM-63-1995
+    IESPhotometricType: Type C
+    IESMaximumIntensity: 612
+    IESMaximumIntensityUnit: Lumens
+    Manufacturer: COOPER LIGHTING - LUMIERE
+    LuminaireCatalogNumber: 201-35MR11-12-SP20
+    LuminaireDescription: 
+    LampCatalogNumber: BARE LAMP DATA FOR 201 AND 211
+    LampDescription: "Q35MR11/SP20\uFFFD-FTF"
+    PrefabLightType: 0
+    SpotAngle: 120
+    iesSize: 128
+    ApplyLightAttenuation: 1
+    UseIESMaximumIntensity: 1
+    CookieCompression: 2
+    LightAimAxisRotation: -90
