@@ -6,7 +6,7 @@ public class Interaction : MonoBehaviour
 {
     public LayerMask interactionLayer;
     private LayerMask obstructionMask;
-    public GameObject highlightVolume;
+    public GameObject grabIcon;
     private Inventory inventory;
     private void Start()
     {
@@ -16,10 +16,7 @@ public class Interaction : MonoBehaviour
     }
     private void Update()
     {
-        //if (Physics.Raycast(transform.position, transform.forward, 3, obstructionMask))
-        //{
-        //    highlightVolume.SetActive(Physics.Raycast(transform.position, transform.forward, 3, interactionLayer));
-        //}
+        grabIcon.SetActive(Physics.Raycast(transform.position, transform.forward, 3, interactionLayer));
         if (Input.GetKeyDown(KeyCode.E) && !PlayerPaused.Paused)
         {
             RaycastHit hit;

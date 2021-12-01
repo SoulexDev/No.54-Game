@@ -26,6 +26,7 @@ public class CPMPlayer : MonoBehaviour
 
     /* Movement stuff */
     public float moveSpeed = 7.0f;                // Ground move speed
+    public float crouchMult = 1;
     public float runAcceleration = 14.0f;         // Ground accel
     public float runDeacceleration = 10.0f;       // Deacceleration that occurs when running on the ground
     public float airAcceleration = 2.0f;          // Air accel
@@ -148,13 +149,13 @@ public class CPMPlayer : MonoBehaviour
 
         //Need to move the camera after the player has been moved because otherwise the camera will clip the player if going fast enough and will always be 1 frame behind.
         // Set the camera's position to the transform
-        if (ownsView)
-        {
-            playerView.position = new Vector3(
-                transform.position.x,
-                transform.position.y + playerViewYOffset,
-                transform.position.z);
-        }
+        //if (ownsView)
+        //{
+        //    playerView.position = new Vector3(
+        //        transform.position.x,
+        //        transform.position.y + playerViewYOffset,
+        //        transform.position.z);
+        //}
 
         if (!camLocked)
         {
@@ -298,7 +299,7 @@ public class CPMPlayer : MonoBehaviour
         moveDirectionNorm = wishdir;
 
         var wishspeed = wishdir.magnitude;
-        wishspeed *= moveSpeed * sprintSpeed;
+        wishspeed *= moveSpeed * sprintSpeed * crouchMult;
 
         Accelerate(wishdir, wishspeed, runAcceleration);
 

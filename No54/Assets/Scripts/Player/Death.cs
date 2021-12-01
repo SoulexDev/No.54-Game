@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using EZCameraShake;
 
 public class Death : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class Death : MonoBehaviour
         hold = holdPos;
         look = facePos;
         inHand = true;
+        CameraShaker.Instance.ShakeOnce(1, 4, 0.1f, 0.2f);
         yield return new WaitForSeconds(1.6f);
         deathScreen.SetActive(true);
         while(canvAlph.alpha < 1)
@@ -44,6 +46,7 @@ public class Death : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(0.2f);
+        VolumeSetter.affectAudio = false;
         mixer.SetFloat("Volume", -80);
         deathLineSC.Stop();
         deathLineSC.PlayOneShot(deathLine);

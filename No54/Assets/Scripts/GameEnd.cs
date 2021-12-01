@@ -17,6 +17,7 @@ public class GameEnd : MonoBehaviour, IInteractable
     public Transform player;
     public GameObject endCredits;
     public CanvasGroup endText;
+    public AudioSource speakingSource;
 
     public void Interact()
     {
@@ -34,7 +35,9 @@ public class GameEnd : MonoBehaviour, IInteractable
         PlayerPaused.Paused = true;
         VolumeSetter.affectAudio = false;
         lookCam = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3.5f);
+        speakingSource.Play();
+        yield return new WaitForSeconds(1.5f);
         endCredits.SetActive(true);
         yield return new WaitForSeconds(2);
         while(endText.alpha < 1)

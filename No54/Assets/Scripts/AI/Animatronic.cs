@@ -16,7 +16,7 @@ public class Animatronic : MonoBehaviour, IAttackable, IProgrammable
     public Transform handTransform;
     public Transform faceTransform;
     public List<Animatronic> animatronics;
-    public float viewAngle = 40;
+    public float viewAngle = 200;
     public Transform target;
     public List<Transform> randomPosTarget = new List<Transform>();
     public NavMeshAgent agent;

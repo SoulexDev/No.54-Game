@@ -14,6 +14,7 @@ public class GameStart : MonoBehaviour
     }
     IEnumerator GameInit()
     {
+        sc.Play();
         while (overlay.alpha > 0)
         {
             overlay.alpha -= 0.01f;
@@ -21,6 +22,5 @@ public class GameStart : MonoBehaviour
         }
         overlay.gameObject.SetActive(false);
         yield return new WaitForSeconds(1);
-        //sc.Play();
     }
 }
